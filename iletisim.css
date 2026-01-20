@@ -1,0 +1,83 @@
+/* 1. GENEL SAYFA AYARLARI */
+body {
+  background-color: #f4f7fa; /* Arka plan: Pastel gri-mavi */
+  color: #5a67d8;            /* Yazı: Yumuşak morumsu mavi */
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0 8%;           /* Kenarlardan nefes alma payı */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2. HEADER VE LOGO */
+header {
+  margin: 30px 0;
+}
+header img {
+  max-width: 180px;
+  transition: transform 0.3s;
+}
+header img:hover {
+  transform: scale(1.05);
+}
+
+/* 3. NAVİGASYON (MENÜ) */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  background: #ffffff;      /* Beyaz menü barı */
+  padding: 10px 30px;
+  border-radius: 50px;      /* Tam yuvarlak köşeler */
+  list-style: none;
+  gap: 30px;
+  box-shadow: 0 4px 15px rgba(162, 185, 214, 0.2);
+}
+nav a {
+  text-decoration: none;
+  color: #718096;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #a2b9d6;
+}
+.ekip-yonlendirme {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f0f4f8; /* Hafif farklı bir arka plan rengi */
+  border-radius: 15px;
+  border: 1px dashed #ccc; /* Kesikli çizgiler başvuru havası katar */
+}
+
+.ekip-yonlendirme h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.ekip-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #e67e22; /* Dikkat çekici bir turuncu veya logonuzun ana rengi */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.ekip-link:hover {
+  color: #d35400;
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #eee;
+  margin-bottom: 30px;
+}

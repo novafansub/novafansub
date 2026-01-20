@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ekip Başvurusu | Nova Fansub</title>
+  <link rel="stylesheet" href="ekip.css">
+</head>
+
+<body>
+<header>
+  <a href="index.html">
+    <img src="resimler/logo.png" alt="logo">
+  </a>
+</header>
+<nav>
+  <ul>
+    <li><a href="kategori.html">KATEGORİLER</a></li>
+    <li><a href="iletisim.html">İLETİŞİM & DESTEK</a></li>
+    <li><a href="ekip.html">EKİP BAŞVURU</a></li>
+  </ul>
+</nav>
+
+  <main>
+    <article id="duyuru">
+         <h2>Ekibimize Katıl! 🚀</h2>
+         <p>Nova Fansub ailesini büyütüyoruz. Sen de bu serüvenin bir parçası olmak ister misin?</p>
+    </article>
+
+    <section id="basvuru-formu" class="ozelkutu">
+      <h2>📝 Başvuru Formu</h2>
+      <p>Lütfen aşağıdaki alanları eksiksiz doldurunuz.</p>
+      <hr>
+      <br>
+
+      <form action="https://formspree.io/f/xvzzbkdk" method="POST">
+        
+        <label for="ad"><b>Ad Soyad:</b></label><br>
+        <input type="text" id="ad" name="isim" required placeholder="Adınız ve Soyadınız"><br><br>
+
+        <label for="email"><b>E-posta Adresi:</b></label><br>
+        <input type="email" id="email" name="email" required placeholder="iletisim@mail.com"><br><br>
+
+        <label for="pozisyon"><b>İstediğiniz Pozisyon:</b></label><br>
+        <select id="pozisyon" name="pozisyon" style="width: 100%; padding: 5px;">
+          <option value="çevirmen">Çevirmen</option>
+          <option value="editör">Editör</option>
+        </select><br><br>
+
+        <label for="mesaj"><b>Deneyimleriniz & Notlarınız:</b></label><br>
+        <textarea id="mesaj" name="mesaj" rows="6" style="width: 100%;" placeholder="Daha önce başka bir grupta çalıştınız mı? Hangi serileri takip ediyorsunuz?"></textarea><br><br>
+
+        <button type="submit" style="cursor: pointer; padding: 10px 20px;">Başvuruyu Gönder</button>
+        
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    novafansub@gmail.com
+  </footer>
+</body>
+
+</html>

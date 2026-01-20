@@ -1,0 +1,117 @@
+/* 1. GENEL SAYFA AYARLARI */
+body {
+  background-color: #f4f7fa; /* Arka plan: Pastel gri-mavi */
+  color: #5a67d8;            /* Yazı: Yumuşak morumsu mavi */
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0 8%;           /* Kenarlardan nefes alma payı */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2. HEADER VE LOGO */
+header {
+  margin: 30px 0;
+}
+header img {
+  max-width: 180px;
+  transition: transform 0.3s;
+}
+header img:hover {
+  transform: scale(1.05);
+}
+
+/* 3. NAVİGASYON (MENÜ) */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  background: #ffffff;      /* Beyaz menü barı */
+  padding: 10px 30px;
+  border-radius: 50px;      /* Tam yuvarlak köşeler */
+  list-style: none;
+  gap: 30px;
+  box-shadow: 0 4px 15px rgba(162, 185, 214, 0.2);
+}
+nav a {
+  text-decoration: none;
+  color: #718096;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #a2b9d6;
+}
+/* Başvuru Formu Genel Konteynırı */
+#basvuru-formu {
+  max-width: 600px; /* Formun çok yayılmasını engeller */
+  margin: 20px auto; /* Sayfada ortalar */
+  padding: 30px;
+  background-color: #1a1a1a; /* Koyu tema arka planı */
+  border-radius: 10px; /* Köşeleri yuvarlar */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Hafif gölge derinliği */
+  color: #fff;
+}
+
+/* Form Başlığı */
+#basvuru-formu h2 {
+  color: #e74c3c; /* Fansub ruhuna uygun kırmızı tonu */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Giriş Alanları (Input, Select, Textarea) */
+#basvuru-formu input, 
+#basvuru-formu select, 
+#basvuru-formu textarea {
+  width: 100%; /* Kutuları tam genişlik yapar */
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Padding'in genişliği bozmasını engeller */
+}
+
+/* Alanlara tıklandığında (Focus) efekt */
+#basvuru-formu input:focus, 
+#basvuru-formu select:focus, 
+#basvuru-formu textarea:focus {
+  border-color: #e74c3c;
+  outline: none;
+  background-color: #333;
+}
+
+/* Gönder Butonu */
+#basvuru-formu button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Yumuşak renk geçişi */
+}
+
+/* Butonun üzerine gelince (Hover) */
+#basvuru-formu button[type="submit"]:hover {
+  background-color: #c0392b; /* Daha koyu kırmızı */
+}
+
+/* Etiketler (Label) */
+#basvuru-formu label b {
+  font-size: 14px;
+  color: #ccc;
+  text-transform: uppercase; /* Küçük harfleri büyüterek şıklık katar */
+}

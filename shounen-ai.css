@@ -1,0 +1,148 @@
+/* 1. GENEL SAYFA AYARLARI */
+body {
+  background-color: #f0f7ff; /* Çok açık pastel gökyüzü mavisi */
+  color: #3498db;            /* Ana yazı rengi: Mavi */
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0 8%;           
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2. HEADER VE LOGO */
+header {
+  margin: 30px 0;
+}
+header img {
+  max-width: 180px;
+}
+
+/* 3. NAVİGASYON */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  display: flex;
+  background: #ffffff;
+  padding: 10px 30px;
+  border-radius: 50px;
+  list-style: none;
+  gap: 30px;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.08);
+}
+nav a {
+  text-decoration: none;
+  color: #718096;
+  font-weight: 600;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #5dade2; /* Hover rengi: Açık Mavi */
+}
+
+/* 4. LİSTE BAŞLIĞI (Pastel Mavi Gradyan) */
+.liste-baslik {
+  background: linear-gradient(135deg, #85c1e9 0%, #3498db 100%);
+  color: white;
+  width: 100%;
+  padding: 45px;
+  border-radius: 40px;
+  margin-top: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
+}
+
+/* 5. SERİ LİSTESİ */
+.seri-listesi {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 30px;
+}
+
+/* 6. SERİ KARTLARI */
+.seri-kart {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 35px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.1);
+}
+
+.seri-kapak {
+  flex-shrink: 0; 
+  width: 200px; 
+}
+
+.seri-kapak img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.seri-bilgi {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.seri-bilgi h2 {
+  margin: 0;
+  color: #2e86c1; /* Koyu Mavi Başlık */
+  font-size: 22px;
+}
+
+.ozet {
+  color: #3498db;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.seri-alt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seri-alt span {
+  font-weight: bold;
+  color: #5dade2;
+}
+
+/* 7. OKU BUTONU (Mavi Tema) */
+.oku-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.oku-btn:hover {
+  background-color: #5dade2;
+}
+
+/* 8. FOOTER */
+footer {
+  margin: 50px 0;
+  color: #85c1e9;
+}
+
+/* 9. RESPONSIVE */
+@media (max-width: 768px) {
+  body { padding: 0 5%; }
+  .seri-kart { flex-direction: column; }
+  .seri-kapak { width: 100%; height: 320px; }
+  .seri-bilgi { text-align: center; }
+  .seri-alt { flex-direction: column; gap: 15px; }
+}
