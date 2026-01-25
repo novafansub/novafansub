@@ -1,148 +1,131 @@
-/* 1. GENEL SAYFA AYARLARI */
+/* =========================================
+   1. GENEL AYARLAR
+   ========================================= */
+* { box-sizing: border-box; }
+
 body {
-  background-color: #fffdf5; /* Çok açık krem/pastel sarı arka plan */
-  color: #d4a017;            /* Ana yazı rengi: Altın/Sarı tonu */
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  margin: 0;
-  padding: 0 8%;           
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    text-align: center;
 }
 
-/* 2. HEADER VE LOGO */
+/* Header & Nav */
 header {
-  margin: 30px 0;
+    background-color: #1a1a1a;
+    padding: 25px 0;
+    border-bottom: 2px solid #ffcc00; /* Altın Sarısı Vurgu */
+    display: flex;
+    justify-content: center;
 }
-header img {
-  max-width: 180px;
-}
+header img { max-width: 180px; }
 
-/* 3. NAVİGASYON */
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 nav ul {
-  display: flex;
-  background: #ffffff;
-  padding: 10px 30px;
-  border-radius: 50px;
-  list-style: none;
-  gap: 30px;
-  box-shadow: 0 4px 15px rgba(212, 160, 23, 0.08);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    background-color: #1e1e1e;
+    margin: 0;
 }
-nav a {
-  text-decoration: none;
-  color: #718096;
-  font-weight: 600;
-  transition: 0.3s;
-}
-nav a:hover {
-  color: #f1c40f; /* Hover rengi: Parlak Sarı */
+nav a { text-decoration: none; color: #ffcc00; font-weight: bold; }
+
+/* =========================================
+   2. LİSTE BAŞLIĞI
+   ========================================= */
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: 30px auto;
 }
 
-/* 4. LİSTE BAŞLIĞI (Pastel Altın Gradyan) */
-.liste-baslik {
-  background: linear-gradient(135deg, #fceabb 0%, #f1c40f 100%);
-  color: white;
-  width: 100%;
-  padding: 45px;
-  border-radius: 40px;
-  margin-top: 30px;
-  box-sizing: border-box;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(241, 196, 15, 0.2);
+.liste-baslik-kart {
+    background: linear-gradient(135deg, #1e1e1e 0%, #2a2415 100%);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #ffcc00;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(255, 204, 0, 0.15);
 }
 
-/* 5. SERİ LİSTESİ */
-.seri-listesi {
-  width: 100%;
-  max-width: 900px;
-  margin-top: 30px;
-}
+.liste-baslik-kart h1 { color: #ffcc00; margin: 0; letter-spacing: 2px; }
+.liste-baslik-kart p { color: #888; margin-top: 10px; }
 
-/* 6. SERİ KARTLARI */
+/* =========================================
+   3. YATAY NOVEL KARTLARI
+   ========================================= */
 .seri-kart {
-  display: flex;
-  background-color: #ffffff;
-  border-radius: 35px;
-  margin-bottom: 30px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(241, 196, 15, 0.1);
+    display: flex;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+.seri-kart:hover {
+    border-color: #ffcc00;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 204, 0, 0.2);
 }
 
 .seri-kapak {
-  flex-shrink: 0; 
-  width: 200px; 
+    width: 180px;
+    flex-shrink: 0;
 }
 
 .seri-kapak img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .seri-bilgi {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.seri-bilgi h2 {
-  margin: 0;
-  color: #b8860b; /* Koyu Altın Başlık */
-  font-size: 22px;
-}
-
-.ozet {
-  color: #996515;
-  font-size: 15px;
-  line-height: 1.6;
-  margin: 15px 0;
-}
+.seri-bilgi h2 { color: #ffcc00; margin: 0 0 10px 0; font-size: 1.4em; }
+.ozet { color: #bbb; font-size: 0.95em; line-height: 1.5; margin-bottom: 15px; }
 
 .seri-alt {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333;
+    padding-top: 15px;
 }
 
-.seri-alt span {
-  font-weight: bold;
-  color: #d4a017;
-}
+.durum { color: #ffcc00; font-weight: bold; font-size: 0.85em; }
 
-/* 7. OKU BUTONU (Altın Tema) */
+/* OKU BUTONU */
 .oku-btn {
-  background-color: #f1c40f;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+    background-color: #ffcc00;
+    color: #121212;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: 0.3s;
 }
 
 .oku-btn:hover {
-  background-color: #d4a017;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
 }
 
-/* 8. FOOTER */
-footer {
-  margin: 50px 0;
-  color: #d4a017;
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .seri-kart { flex-direction: column; }
+    .seri-kapak { width: 100%; height: 250px; }
 }
 
-/* 9. RESPONSIVE */
-@media (max-width: 768px) {
-  body { padding: 0 5%; }
-  .seri-kart { flex-direction: column; }
-  .seri-kapak { width: 100%; height: 320px; }
-  .seri-bilgi { text-align: center; }
-  .seri-alt { flex-direction: column; gap: 15px; }
-}
+footer { padding: 40px; color: #444; font-size: 0.8em; }
