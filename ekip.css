@@ -1,117 +1,150 @@
-/* 1. GENEL SAYFA AYARLARI */
+/* =========================================
+   1. GENEL AYARLAR & TAŞMA ENGELLEYİCİ
+   ========================================= */
+* {
+    /* Tüm elemanların genişlik hesaplamasını sabitler, sağa taşmayı önler */
+    box-sizing: border-box; 
+}
+
 body {
-  background-color: #f4f7fa; /* Arka plan: Pastel gri-mavi */
-  color: #5a67d8;            /* Yazı: Yumuşak morumsu mavi */
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  margin: 0;
-  padding: 0 8%;           /* Kenarlardan nefes alma payı */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden; /* Sayfanın yatayda kaymasını kesin olarak engeller */
 }
 
-/* 2. HEADER VE LOGO */
+/* =========================================
+   2. HEADER & NAV (SABİT DÜZEN)
+   ========================================= */
 header {
-  margin: 30px 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    border-bottom: 2px solid #da70d6;
+    display: flex;
+    justify-content: center;
 }
+
 header img {
-  max-width: 180px;
-  transition: transform 0.3s;
-}
-header img:hover {
-  transform: scale(1.05);
+    max-width: 180px;
+    height: auto;
 }
 
-/* 3. NAVİGASYON (MENÜ) */
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 nav ul {
-  display: flex;
-  background: #ffffff;      /* Beyaz menü barı */
-  padding: 10px 30px;
-  border-radius: 50px;      /* Tam yuvarlak köşeler */
-  list-style: none;
-  gap: 30px;
-  box-shadow: 0 4px 15px rgba(162, 185, 214, 0.2);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    background-color: #1e1e1e;
+    margin: 0;
 }
+
 nav a {
-  text-decoration: none;
-  color: #718096;
-  font-weight: 600;
-  font-size: 14px;
-  transition: 0.3s;
+    text-decoration: none;
+    color: #f8a5c2;
+    font-weight: bold;
+    font-size: 0.9em;
 }
-nav a:hover {
-  color: #a2b9d6;
+
+/* =========================================
+   3. ANA İÇERİK ALANI (HİZALAMA BURADA BİTİYOR)
+   ========================================= */
+main {
+    width: 90%;          /* Ekranın %90'ını kaplar, mobilde kenar payı bırakır */
+    max-width: 800px;    /* Kategoriler ve Formun maksimum genişliğini eşitler */
+    margin: 30px auto;   /* Sayfayı ortalar */
 }
-/* Başvuru Formu Genel Konteynırı */
+
+.sayfa-baslik {
+    color: #d1d1f1;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   4. KARTLAR (DUYURU & FORM & KATEGORİ)
+   ========================================= */
+.duyuru-kart, #basvuru-formu, .kategori-kart, .iletisim-kapsayici {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    border: 1px solid #333;
+    padding: 25px;
+    margin-bottom: 30px;
+    width: 100%;        /* Main genişliğine tam oturur */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Formun içindeki yazıların sola yaslı olması için */
 #basvuru-formu {
-  max-width: 600px; /* Formun çok yayılmasını engeller */
-  margin: 20px auto; /* Sayfada ortalar */
-  padding: 30px;
-  background-color: #1a1a1a; /* Koyu tema arka planı */
-  border-radius: 10px; /* Köşeleri yuvarlar */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Hafif gölge derinliği */
-  color: #fff;
+    text-align: left;
 }
 
-/* Form Başlığı */
 #basvuru-formu h2 {
-  color: #e74c3c; /* Fansub ruhuna uygun kırmızı tonu */
-  text-align: center;
-  margin-bottom: 10px;
+    text-align: center;
+    color: #d1d1f1;
 }
 
-/* Giriş Alanları (Input, Select, Textarea) */
-#basvuru-formu input, 
-#basvuru-formu select, 
-#basvuru-formu textarea {
-  width: 100%; /* Kutuları tam genişlik yapar */
-  padding: 12px;
-  margin-top: 8px;
-  margin-bottom: 20px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background-color: #2c2c2c;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  box-sizing: border-box; /* Padding'in genişliği bozmasını engeller */
+/* =========================================
+   5. FORM ELEMANLARI (GİRİŞ ALANLARI)
+   ========================================= */
+.form-grup {
+    margin-bottom: 20px;
 }
 
-/* Alanlara tıklandığında (Focus) efekt */
-#basvuru-formu input:focus, 
-#basvuru-formu select:focus, 
-#basvuru-formu textarea:focus {
-  border-color: #e74c3c;
-  outline: none;
-  background-color: #333;
+label {
+    display: block;
+    color: #f8a5c2;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    font-weight: bold;
 }
 
-/* Gönder Butonu */
-#basvuru-formu button[type="submit"] {
-  width: 100%;
-  padding: 15px;
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Yumuşak renk geçişi */
+input, select, textarea {
+    width: 100%;        /* Formun dışına taşmasını engeller */
+    padding: 12px;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
 }
 
-/* Butonun üzerine gelince (Hover) */
-#basvuru-formu button[type="submit"]:hover {
-  background-color: #c0392b; /* Daha koyu kırmızı */
+input:focus, select:focus, textarea:focus {
+    border-color: #da70d6;
+    box-shadow: 0 0 8px rgba(218, 112, 214, 0.3);
 }
 
-/* Etiketler (Label) */
-#basvuru-formu label b {
-  font-size: 14px;
-  color: #ccc;
-  text-transform: uppercase; /* Küçük harfleri büyüterek şıklık katar */
+/* =========================================
+   6. BUTONLAR & ETKİLEŞİM
+   ========================================= */
+button, .gonder-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #da70d6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #f8a5c2;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   7. FOOTER
+   ========================================= */
+footer {
+    padding: 40px 0;
+    color: #666;
+    font-size: 0.8em;
 }
