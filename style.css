@@ -1,309 +1,102 @@
-/* 1. GENEL SAYFA AYARLARI */
+/* Genel Ayarlar */
 body {
-  background-color: #f4f7fa; /* Arka plan: Pastel gri-mavi */
-  color: #5a67d8;            /* Yazı: Yumuşak morumsu mavi */
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  margin: 0;
-  padding: 0 8%;           /* Kenarlardan nefes alma payı */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    text-align: center;
 }
 
-/* 2. HEADER VE LOGO */
+/* Header & Nav */
 header {
-  margin: 30px 0;
-}
-header img {
-  max-width: 180px;
-  transition: transform 0.3s;
-}
-header img:hover {
-  transform: scale(1.05);
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    border-bottom: 2px solid #da70d6;
+    display: flex;
+    justify-content: center;
 }
 
-/* 3. NAVİGASYON (MENÜ) */
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+header img { max-width: 180px; }
+
 nav ul {
-  display: flex;
-  background: #ffffff;      /* Beyaz menü barı */
-  padding: 10px 30px;
-  border-radius: 50px;      /* Tam yuvarlak köşeler */
-  list-style: none;
-  gap: 30px;
-  box-shadow: 0 4px 15px rgba(162, 185, 214, 0.2);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    background-color: #1e1e1e;
+    margin: 0;
 }
+
 nav a {
-  text-decoration: none;
-  color: #718096;
-  font-weight: 600;
-  font-size: 14px;
-  transition: 0.3s;
-}
-nav a:hover {
-  color: #a2b9d6;
+    text-decoration: none;
+    color: #f8a5c2;
+    font-weight: bold;
 }
 
-/* 4. DUYURU KUTUSU (BANNER) */
-#duyuru {
-  background: linear-gradient(135deg, #a2b9d6 0%, #c2d1e5 100%);
-  color: white;
-  width: 100%;
-  padding: 50px 40px;
-  border-radius: 40px;      /* Çok yumuşak köşeler */
-  margin-top: 30px;
-  box-sizing: border-box;
-  box-shadow: 0 10px 30px rgba(162, 185, 214, 0.2);
-}
-#duyuru h2 { margin: 0; font-size: 28px; }
-#duyuru p { margin: 10px 0 0 0; opacity: 0.9; }
-
-/* 5. SECTİON BAŞLIKLARI (Haftanın En Sevilenleri) */
-section h2 {
-  color: #4a5568;
-  margin-top: 40px;
-  width: 100%;
-  text-align: left;
+/* Başlıklar */
+.sayfa-baslik {
+    color: #d1d1f1;
+    margin: 30px 0 15px 0;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* 6. YENİ BÖLÜMLER (WEBTOON GRID) */
-.yb {
-  display: grid;
-  /* Masaüstü ve tablette: Yan yana 3 tane sığdırmaya çalışır */
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  gap: 25px; 
-  padding: 30px;
-  background-color: #ffffff;
-  border-radius: 35px;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-  margin-top: 20px;
+/* Duyuru Alanı */
+.duyuru-kart {
+    background-color: #252525;
+    padding: 15px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    border: 1px solid #444;
 }
 
-/* "YENİ BÖLÜMLER" yazısının tüm satırı kaplaması için */
-.yb h4 {
-  grid-column: 1 / -1; 
-  margin: 0 0 10px 0;
-  color: #a2b9d6;
-  font-size: 22px;
-  border-bottom: 2px dashed #f0f4f8;
-  padding-bottom: 10px;
+/* KATEGORİLER SAYFASINDAN ALINAN KART YAPISI */
+.kategori-konteynir {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 0 10%;
+    margin-bottom: 50px;
 }
 
-/* 7. WEBTOON KARTLARI (KAPAKLAR) */
-.yb a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #5a67d8;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-.yb a:hover {
-  transform: translateY(-8px);
+.kategori-kart {
+    text-decoration: none;
+    background-color: #252525;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #444;
+    transition: 0.3s;
+    display: block;
 }
 
-.yb img {
-  width: 100%;
-  height: 400px;        /* Kapakların boyu eşit olsun diye sabit yükseklik */
-  object-fit: cover;    /* Resimlerin yamulmasını önler */
-  border-radius: 25px;  /* Yumuşak kapak köşeleri */
-  box-shadow: 0 8px 20px rgba(162, 185, 214, 0.3);
-  margin-bottom: 15px;
+.kategori-kart:hover {
+    border-color: #da70d6;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(218, 112, 214, 0.3);
 }
 
-/* 8. FOOTER */
+.resim-alani img {
+    width: 100%;
+    height: 250px; /* Kategorilerdeki gibi yüksekliği sabitledik */
+    object-fit: cover;
+    display: block;
+}
+
+.kategori-ad {
+    padding: 12px;
+    color: #f8a5c2;
+    font-weight: bold;
+    background: #1e1e1e;
+}
+
+/* Footer */
 footer {
-  margin: 50px 0;
-  color: #a0aec0;
-  font-size: 14px;
-}
-
-/* 9. RESPONSIVE (EKRAN AYARLARI) */
-
-/* Tabletler İçin (Genişlik 992px altı) */
-@media (max-width: 992px) {
-  .yb {
-    grid-template-columns: repeat(2, 1fr); /* Yan yana 2 tane */
-  }
-}
-
-/* Telefonlar İçin (Genişlik 600px altı) */
-@media /* 1. GENEL SAYFA AYARLARI */
-body {
-  background-color: #f4f7fa; /* Pastel arka plan */
-  color: #5a67d8;            /* Yazı rengi */
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  margin: 0;
-  padding: 0 8%;           /* Kenar boşlukları */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* 2. HEADER VE LOGO */
-header {
-  margin: 30px 0;
-}
-header img {
-  max-width: 180px;
-  transition: 0.3s;
-}
-
-/* 3. NAVİGASYON (MENÜ) */
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-nav ul {
-  display: flex;
-  background: #ffffff;
-  padding: 10px 30px;
-  border-radius: 50px;
-  list-style: none;
-  gap: 30px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-nav a {
-  text-decoration: none;
-  color: #718096;
-  font-weight: 600;
-  transition: 0.3s;
-}
-nav a:hover {
-  color: #a2b9d6;
-}
-
-/* 4. DUYURU KUTUSU (AÇIK MAVİ BANNER) */
-#duyuru {
-  background: linear-gradient(135deg, #a2b9d6 0%, #c2d1e5 100%);
-  color: white;
-  width: 100%;
-  padding: 50px 40px;
-  border-radius: 40px;
-  margin-top: 30px;
-  box-sizing: border-box;
-  box-shadow: 0 10px 30px rgba(162, 185, 214, 0.2);
-}
-#duyuru h2 { margin: 0; font-size: 28px; }
-#duyuru p { margin: 10px 0 0 0; opacity: 0.9; }
-
-/* 5. HAFTANIN EN SEVİLENLERİ (BİR TIK KOYU MAVİ BANNER) */
-#ensevilenler {
-  /* Duyuru kutusundan biraz daha koyu pastel tonlar */
-  background: linear-gradient(135deg, #8ba7c9 0%, #aab9d1 100%);
-  color: white;
-  width: 100%;
-  padding: 50px 40px;
-  border-radius: 40px;
-  margin-top: 30px;
-  box-sizing: border-box;
-  box-shadow: 0 10px 25px rgba(139, 167, 201, 0.25);
-}
-#ensevilenler h2 {
-  margin: 0;
-  font-size: 26px;
-  color: white;
-}
-#ensevilenler p {
-  margin: 10px 0 0 0;
-  opacity: 0.95;
-}
-
-/* 6. YENİ BÖLÜMLER (WEBTOON GRID) */
-.yb {
-  display: grid;
-  /* Masaüstünde yan yana 3-4 kapak sığdırmaya çalışır */
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px; 
-  padding: 40px;
-  background-color: #ffffff;
-  border-radius: 40px;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.02);
-  margin-top: 30px;
-}
-
-.yb h4 {
-  grid-column: 1 / -1; 
-  margin: 0 0 15px 0;
-  color: #a2b9d6;
-  font-size: 24px;
-  border-bottom: 2px dashed #f0f4f8;
-  padding-bottom: 10px;
-}
-
-/* 7. WEBTOON KARTLARI */
-.yb a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #5a67d8;
-  font-weight: 600;
-  transition: transform 0.3s ease;
-}
-.yb a:hover {
-  transform: translateY(-10px);
-}
-
-.yb img {
-  width: 100%;
-  height: 420px;        /* Tüm kapakları aynı boya sabitler */
-  object-fit: cover;    /* Resimlerin bozulmasını engeller */
-  border-radius: 30px;  /* Kapak kenarlarını yumuşatır */
-  box-shadow: 0 10px 25px rgba(162, 185, 214, 0.3);
-  margin-bottom: 15px;
-}
-
-/* 8. FOOTER */
-footer {
-  margin: 50px 0;
-  color: #a0aec0;
-  font-size: 14px;
-}
-
-/* 9. RESPONSIVE (EKRAN AYARLARI) */
-
-/* Tabletler İçin */
-@media (max-width: 992px) {
-  .yb {
-    grid-template-columns: repeat(2, 1fr); /* Yan yana 2 kapak */
-  }
-}
-
-/* Telefonlar İçin */
-@media (max-width: 600px) {
-  body { padding: 0 5%; }
-  #duyuru, #ensevilenler, .yb {
-    padding: 30px 20px;
-    border-radius: 30px;
-  }
-  .yb {
-    grid-template-columns: 1fr; /* Tek sütun */
-  }
-  .yb img {
-    height: 380px;
-  }
-}
- {
-  body { padding: 0 5%; }
-  .yb {
-    grid-template-columns: 1fr; /* Tek sütun, yan yana 1 tane */
-  }
-  .yb img {
-    height: 350px;
-  }
-  nav ul {
-    gap: 15px;
-    padding: 10px 20px;
-  }
+    padding: 30px;
+    color: #666;
+    font-size: 0.8em;
 }
