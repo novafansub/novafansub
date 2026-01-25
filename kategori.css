@@ -1,144 +1,88 @@
-/* 1. GENEL SAYFA AYARLARI */
+/* Genel Ayarlar - index.html ile aynı */
 body {
-  background-color: #f4f7fa; /* Pastel arka plan */
-  color: #5a67d8;            /* Pastel morumsu mavi yazı */
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  margin: 0;
-  padding: 0 8%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    text-align: center;
 }
 
-/* 2. HEADER VE NAVİGASYON (Ana Sayfa ile Uyumlu) */
+/* Header & Nav - index.html ile birebir aynı tutuyoruz */
 header {
-  margin: 30px 0;
-}
-header img {
-  max-width: 180px;
-  transition: 0.3s;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    border-bottom: 2px solid #da70d6;
 }
 
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+header img { max-width: 180px; }
+
 nav ul {
-  display: flex;
-  background: #ffffff;
-  padding: 10px 30px;
-  border-radius: 50px;
-  list-style: none;
-  gap: 30px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    background-color: #1e1e1e;
 }
+
 nav a {
-  text-decoration: none;
-  color: #718096;
-  font-weight: 600;
-  transition: 0.3s;
-}
-nav a:hover {
-  color: #a2b9d6;
+    text-decoration: none;
+    color: #f8a5c2;
+    font-weight: bold;
 }
 
-/* 3. KATEGORİ BAŞLIĞI */
+/* Kategori Başlığı */
 .kategori-baslik {
-  text-align: center;
-  margin: 40px 0;
-  color: #4a5568;
-  font-size: 28px;
-  letter-spacing: 1px;
+    color: #d1d1f1;
+    margin: 30px 0;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* 4. KARE KART KONTEYNERI */
+/* Kategori Kart Konteynırı (Yan Yana Dizilim) */
 .kategori-konteynir {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 10%;
+    margin-bottom: 50px;
 }
 
-/* 5. KARE KART YAPISI */
+/* Kategori Kartları */
 .kategori-kart {
-  text-decoration: none;
-  color: inherit;
-  width: 250px;
-  background: #fff;
-  border-radius: 25px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 6px solid transparent; /* Renk efekti buraya gelecek */
+    text-decoration: none;
+    background-color: #252525;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #444;
+    transition: 0.3s;
 }
 
 .kategori-kart:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Resim Alanını Tam Kare Yapar (Resimler bozulmaz) */
-.resim-alani {
-  width: 100%;
-  aspect-ratio: 1 / 1; 
-  overflow: hidden;
+    border-color: #da70d6;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(218, 112, 214, 0.3);
 }
 
 .resim-alani img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Resimleri kartın içine düzgün sığdırır */
+    display: block;
 }
 
 .kategori-ad {
-  padding: 20px;
-  text-align: center;
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: 1.5px;
-  color: #4a5568;
-  transition: color 0.3s ease;
+    padding: 12px;
+    color: #f8a5c2;
+    font-weight: bold;
+    background: #1e1e1e;
 }
 
-/* 6. TÜRLERE ÖZEL RENK AYARLARI (İstediğin Renkler) */
-
-/* Yaoi - Mor */
-.yaoi:hover { border-bottom-color: #8e44ad; }
-.yaoi:hover .kategori-ad { color: #8e44ad; }
-
-/* Yuri - Pembe */
-.yuri:hover { border-bottom-color: #e91e63; }
-.yuri:hover .kategori-ad { color: #e91e63; }
-
-/* Noveller - Altın/Sarı */
-.noveller:hover { border-bottom-color: #f1c40f; }
-.noveller:hover .kategori-ad { color: #d4a017; }
-
-/* Manhwa - Yeşil (Güncellendi) */
-.manhwa:hover { border-bottom-color: #27ae60; }
-.manhwa:hover .kategori-ad { color: #27ae60; }
-
-/* Shounen Ai - Mavi */
-.shounen-ai:hover { border-bottom-color: #3498db; }
-.shounen-ai:hover .kategori-ad { color: #3498db; }
-
-/* 7. FOOTER */
+/* Footer */
 footer {
-  margin: 50px 0;
-  color: #a0aec0;
-  font-size: 14px;
-}
-
-/* 8. MOBİL UYUMLULUK */
-@media (max-width: 600px) {
-  body { padding: 0 5%; }
-  .kategori-kart {
-    width: 100%; /* Mobilde kartlar tam ekran genişliği olur */
-  }
+    padding: 20px;
+    border-top: 1px solid #333;
+    color: #888;
 }
