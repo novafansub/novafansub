@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ekip Başvurusu | Nova Fansub</title>
   <link rel="stylesheet" href="ekip.css">
 </head>
-
 <body>
+
 <header>
   <a href="index.html">
-    <img src="resimler/logo.png" alt="logo">
+    <img src="resimler/logo.png" alt="logo" class="ana-logo">
   </a>
 </header>
+
 <nav>
   <ul>
     <li><a href="kategori.html">KATEGORİLER</a></li>
@@ -22,44 +22,52 @@
   </ul>
 </nav>
 
-  <main>
-    <article id="duyuru">
-         <h2>Ekibimize Katıl! 🚀</h2>
-         <p>Nova Fansub ailesini büyütüyoruz. Sen de bu serüvenin bir parçası olmak ister misin?</p>
-    </article>
+<main>
+  <h1 class="sayfa-baslik">EKİBİMİZE KATIL! 🚀</h1>
+  <div class="duyuru-kart">
+     <p>Nova Fansub ailesini büyütüyoruz. Sen de bunun bir parçası olmak ister misin?</p>
+  </div>
 
-    <section id="basvuru-formu" class="ozelkutu">
-      <h2>📝 Başvuru Formu</h2>
-      <p>Lütfen aşağıdaki alanları eksiksiz doldurunuz.</p>
-      <hr>
-      <br>
+  <section id="basvuru-formu">
+    <h2>📝 BAŞVURU FORMU</h2>
+    <p>Lütfen aşağıdaki alanları eksiksiz doldurunuz.</p>
+    <hr class="ayrac">
 
-      <form action="https://formspree.io/f/xvzzbkdk" method="POST">
-        
-        <label for="ad"><b>Ad Soyad:</b></label><br>
-        <input type="text" id="ad" name="isim" required placeholder="Adınız ve Soyadınız"><br><br>
+    <form action="https://formspree.io/f/xvzzbkdk" method="POST">
+      
+      <div class="form-grup">
+        <label for="ad">Ad Soyad</label>
+        <input type="text" id="ad" name="isim" required placeholder="Adınız ve Soyadınız">
+      </div>
 
-        <label for="email"><b>E-posta Adresi:</b></label><br>
-        <input type="email" id="email" name="email" required placeholder="iletisim@mail.com"><br><br>
+      <div class="form-grup">
+        <label for="email">E-posta Adresi</label>
+        <input type="email" id="email" name="email" required placeholder="iletisim@mail.com">
+      </div>
 
-        <label for="pozisyon"><b>İstediğiniz Pozisyon:</b></label><br>
-        <select id="pozisyon" name="pozisyon" style="width: 100%; padding: 5px;">
+      <div class="form-grup">
+        <label for="pozisyon">İstediğiniz Pozisyon</label>
+        <select id="pozisyon" name="pozisyon">
           <option value="çevirmen">Çevirmen</option>
           <option value="editör">Editör</option>
-        </select><br><br>
+          <option value="dizgi">Dizgi / Typesetter</option>
+        </select>
+      </div>
 
-        <label for="mesaj"><b>Deneyimleriniz & Notlarınız:</b></label><br>
-        <textarea id="mesaj" name="mesaj" rows="6" style="width: 100%;" placeholder="Daha önce başka bir grupta çalıştınız mı? Hangi serileri takip ediyorsunuz?"></textarea><br><br>
+      <div class="form-grup">
+        <label for="mesaj">Deneyimleriniz & Notlarınız</label>
+        <textarea id="mesaj" name="mesaj" rows="5" placeholder="Daha önce başka bir grupta çalıştınız mı?"></textarea>
+      </div>
 
-        <button type="submit" style="cursor: pointer; padding: 10px 20px;">Başvuruyu Gönder</button>
-        
-      </form>
-    </section>
-  </main>
+      <button type="submit" class="basvuru-btn">BAŞVURUYU GÖNDER</button>
+      
+    </form>
+  </section>
+</main>
 
-  <footer>
-    novafansub@gmail.com
-  </footer>
+<footer>
+  novafansub0@gmail.com
+</footer>
+
 </body>
-
 </html>
